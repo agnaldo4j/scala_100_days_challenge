@@ -3,4 +3,4 @@
 ## Scala 100 days challenge
 
 ### Usage
-Lean each day a new scala insight
+Learn each day a new scala insight
