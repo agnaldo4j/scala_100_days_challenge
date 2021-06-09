@@ -1,4 +1,5 @@
 val scalaTestVersion = "3.2.9"
+val catsVersion = "2.6.1"
 
 ThisBuild / organization := "com.thelambdadev"
 ThisBuild / scalaVersion := "3.0.0"
@@ -13,4 +14,5 @@ lazy val root = project
 
     libraryDependencies += "org.scalactic" %% "scalactic" % scalaTestVersion,
     libraryDependencies += "org.scalatest" %% "scalatest-freespec" % scalaTestVersion % "test",
+    libraryDependencies += "org.typelevel" %% "cats-core" % catsVersion,
   )
