@@ -50,12 +50,12 @@ object SimpleFunctor {
     println(tryResult)
 
     // My own functor to the MyTree structure
-    implicit object TreeFunctor extends Functor[MyTree] {
+    // Using Scala3 Uhuuu
+    given Functor[MyTree] with
       override def map[A, B](fa: MyTree[A])(f: A => B): MyTree[B] = fa match {
         case Leaf(v) => Leaf(f(v))
         case Branch(v, left, right) => Branch(f(v), map(left)(f), map(right)(f))
       }
-    }
 
     val myTreeFunctor = Functor[MyTree]
     val myTreeResult = myTreeFunctor.map(myTree)(_ + 1)
