@@ -13,10 +13,7 @@ object MyApp extends zio.App {
 }
 
 //Running with zio Runtime
-@main def executeZio() = {
-  val runtime = Runtime.default
-  runtime.unsafeRun(myAppLogic)
-}
+@main def executeZio() = Runtime.default.unsafeRun(myAppLogic)
 
 //Very simple effects with ZIO
 val myAppLogic = for {
