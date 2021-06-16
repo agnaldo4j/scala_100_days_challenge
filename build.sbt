@@ -1,5 +1,6 @@
 val scalaTestVersion = "3.2.9"
 val catsVersion = "2.6.1"
+val zioVersion = "1.0.8"
 
 ThisBuild / organization := "com.thelambdadev"
 ThisBuild / scalaVersion := "3.0.0"
@@ -12,6 +13,8 @@ lazy val root = project
   .settings(
     version := "0.1.0",
 
+    libraryDependencies += "dev.zio" %% "zio" % zioVersion,
+    libraryDependencies += "dev.zio" %% "zio-streams" % zioVersion,
     libraryDependencies += "org.scalactic" %% "scalactic" % scalaTestVersion,
     libraryDependencies += "org.scalatest" %% "scalatest-freespec" % scalaTestVersion % "test",
     libraryDependencies += "org.typelevel" %% "cats-core" % catsVersion,
